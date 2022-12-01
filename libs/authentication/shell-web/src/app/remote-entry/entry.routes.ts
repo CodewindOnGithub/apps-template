@@ -1,6 +1,9 @@
-import { Route } from '@angular/router';
-import { RemoteEntryComponent } from './entry.component';
+import { Routes } from '@angular/router';
 
-export const remoteRoutes: Route[] = [
-  { path: '', component: RemoteEntryComponent },
-];
+export default [
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  {
+    path: 'login',
+    loadChildren: () => import('@authentication/feature-login/routes'),
+  },
+] as Routes;

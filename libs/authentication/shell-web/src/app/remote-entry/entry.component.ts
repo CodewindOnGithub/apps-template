@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, NxWelcomeComponent],
+  imports: [CommonModule, RouterModule],
   selector: 'authentication-shell-web-entry',
-  template: `<authentication-nx-welcome></authentication-nx-welcome>`,
+  template: `<router-outlet></router-outlet> `,
 })
 export class RemoteEntryComponent {}

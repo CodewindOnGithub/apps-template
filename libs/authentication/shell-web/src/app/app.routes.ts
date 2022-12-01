@@ -1,9 +1,13 @@
-import { Route } from '@angular/router';
+import { Route, Routes } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    loadChildren: () =>
-      import('./remote-entry/entry.routes').then((m) => m.remoteRoutes),
+    pathMatch: 'full',
+    redirectTo: 'authentication',
   },
-];
+  {
+    path: 'authentication',
+    loadChildren: () => import('./remote-entry/entry.routes'),
+  },
+] as Routes;

@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@authentication/domain": ["libs/authentication/domain/src/index.ts"],
+      "@authentication/feature-login": [
+        "libs/authentication/feature-login/src/index.ts"
+      ],
+      "@authentication/feature-login/routes": [
+        "libs/authentication/feature-login/src/lib/routes.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

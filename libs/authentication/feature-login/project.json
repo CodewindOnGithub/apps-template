@@ -1,0 +1,27 @@
+{
+  "name": "authentication-feature-login",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/authentication/feature-login/src",
+  "prefix": "authentication",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/authentication/feature-login/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/authentication/feature-login/**/*.ts",
+          "libs/authentication/feature-login/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:authentication", "type:feature"]
+}

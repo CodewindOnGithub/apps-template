@@ -6,9 +6,7 @@ export const appRoutes: Route[] = [
   {
     path: 'authentication-shell-web',
     loadChildren: () =>
-      loadRemoteModule('authentication-shell-web', './Routes').then(
-        (m) => m.remoteRoutes
-      ),
+      loadRemoteModule('authentication-shell-web', './Routes'),
   },
   {
     path: '',
