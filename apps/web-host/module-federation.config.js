@@ -1,6 +1,6 @@
 module.exports = {
   name: 'web-host',
-  remotes: ['authentication-shell-web'],
+  remotes: [],
   additionalShared: [
     '@angular/core',
     '@angular/common',
