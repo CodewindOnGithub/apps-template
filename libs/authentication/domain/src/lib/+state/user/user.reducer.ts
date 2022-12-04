@@ -1,8 +1,8 @@
-import { createReducer, on, Action } from '@ngrx/store';
-import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
+import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
+import { Action, createReducer, on } from '@ngrx/store';
 
+import { User } from '@authentication/models';
 import * as UserActions from './user.actions';
-import { User } from '../../entities/user';
 
 export const USER_FEATURE_KEY = 'authentication-user';
 

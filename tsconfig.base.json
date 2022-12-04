@@ -19,9 +19,13 @@
       "@authentication/feature-login": [
         "libs/authentication/feature-login/src/index.ts"
       ],
+      "@authentication/feature-login-api": [
+        "libs/authentication/feature-login-api/src/index.ts"
+      ],
       "@authentication/feature-login/routes": [
         "libs/authentication/feature-login/src/lib/routes.ts"
-      ]
+      ],
+      "@authentication/models": ["libs/authentication/models/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

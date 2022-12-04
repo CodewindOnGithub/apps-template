@@ -1,5 +1,5 @@
+import { User } from '@authentication/models';
 import { createAction, props } from '@ngrx/store';
-import { User } from '../../entities/user';
 
 export const loadUser = createAction('[User] Load User');
 
