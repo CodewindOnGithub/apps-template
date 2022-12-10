@@ -1,12 +1,12 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { Action, createReducer, on } from '@ngrx/store';
 
-import { UserDto } from '@authentication/models';
+import { User } from '@authentication/models';
 import * as UserActions from './user.actions';
 
 export const USER_FEATURE_KEY = 'authentication-user';
 
-export interface State extends EntityState<UserDto> {
+export interface State extends EntityState<User> {
   selectedId?: string | number; // which User record has been selected
   loaded: boolean; // has the User list been loaded
   error?: string | null; // last known error (if any)
@@ -16,7 +16,7 @@ export interface UserPartialState {
   readonly [USER_FEATURE_KEY]: State;
 }
 
-export const userAdapter: EntityAdapter<UserDto> = createEntityAdapter<UserDto>();
+export const userAdapter: EntityAdapter<User> = createEntityAdapter<User>();
 
 export const initialState: State = userAdapter.getInitialState({
   // set initial required properties

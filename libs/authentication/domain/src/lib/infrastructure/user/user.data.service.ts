@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { UserDto } from '@authentication/models';
+import { User } from '@authentication/models';
 import { Observable, of } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class UserDataService {
   constructor(private http: HttpClient) {}
 
-  load(): Observable<UserDto[]> {
+  load(): Observable<User[]> {
     // Uncomment if needed
     /*
         const url = '...';

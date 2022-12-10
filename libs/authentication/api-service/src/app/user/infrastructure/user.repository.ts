@@ -1,3 +1,4 @@
+import { User } from '@authentication/models';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -9,9 +10,7 @@ export class UserRepository {
     @InjectModel(UserEntity.name) private userModel: Model<UserDocument>
   ) {}
 
-  async createUser(
-    userEntity: UserEntity
-  ): Promise<UserEntity & { id?: string }> {
-    return new this.userModel(userEntity).save();
+  async saveUser(user: User): Promise<UserEntity & { id?: string }> {
+    return new this.userModel(user).save();
   }
 }
