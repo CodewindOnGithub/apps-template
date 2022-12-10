@@ -20,5 +20,5 @@
       }
     }
   },
-  "tags": ["domain:authentication\"", "\"type:models"]
+  "tags": ["domain:authentication", "type:models"]
 }
