@@ -5,7 +5,7 @@ import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(environment.mongoDbUri),
+    MongooseModule.forRoot(process.env.mongoDbUri || environment.mongoDbUri),
     UserModule,
   ],
 })

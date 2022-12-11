@@ -4,20 +4,33 @@ export class UserModel implements User {
   id?: string;
   firstName: string;
   lastName: string;
-  testMich: string;
+  email: string;
+  password: string;
 
-  constructor({ id, firstName, lastName }: Partial<UserModel>) {
+  constructor({
+    id,
+    firstName,
+    lastName,
+    email,
+    password,
+  }: Partial<UserModel>) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
+    this.email = email;
+    this.password = password;
   }
 
   setId(id: string) {
     this.id = id;
   }
 
+  isPasswordEquals(password: string): boolean {
+    return password === this.password;
+  }
+
   toDto(): User {
-    const { id, firstName, lastName } = this;
-    return { id, firstName, lastName };
+    const { id, firstName, lastName, email } = this;
+    return { id, firstName, lastName, email };
   }
 }

@@ -2,7 +2,7 @@ import { User } from '@authentication/models';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 
-export type UserDocument = HydratedDocument<UserEntity>
+export type UserDocument = HydratedDocument<UserEntity>;
 
 @Schema()
 export class UserEntity implements User {
@@ -11,6 +11,12 @@ export class UserEntity implements User {
 
   @Prop({ required: true })
   lastName: string;
+
+  @Prop({ required: true })
+  email: string;
+
+  @Prop()
+  password: string;
 
   @Prop({ default: true })
   isActive?: boolean;
