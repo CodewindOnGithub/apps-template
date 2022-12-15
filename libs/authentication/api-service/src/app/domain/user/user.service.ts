@@ -1,7 +1,7 @@
 import { User } from '@authentication/models';
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { UserRepository } from '../infrastructure/user.repository';
+import { UserRepository } from '../../infrastructure/user/user.repository';
 import { UserModel } from './user';
 
 @Injectable()
